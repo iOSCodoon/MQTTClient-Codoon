@@ -1,0 +1,16 @@
+PODS:
+  - MQTTClient-Codoon (0.1.0)
+
+DEPENDENCIES:
+  - MQTTClient-Codoon (from `../`)
+
+EXTERNAL SOURCES:
+  MQTTClient-Codoon:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MQTTClient-Codoon: 9d4f14502e831bd2d44b6e620169dbdce1418831
+
+PODFILE CHECKSUM: 6d93e4964cccc6613140520dca8747d359d02561
+
+COCOAPODS: 1.2.0
