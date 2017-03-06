@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MQTTClient-Codoon_Tests' do
+  pod 'MQTTClient-Codoon', :path => '../'
+  
+  
+end
