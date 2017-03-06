@@ -15,11 +15,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import <MQTTClient/MQTTSession.h>
-#import <MQTTClient/MQTTSessionLegacy.h>
-#import <MQTTClient/MQTTSessionSynchron.h>
-#import <MQTTClient/MQTTMessage.h>
-#import <MQTTClient/MQTTTransport.h>
-#import <MQTTClient/MQTTCFSocketTransport.h>
-#import <MQTTClient/MQTTCoreDataPersistence.h>
-#import <MQTTClient/MQTTSSLSecurityPolicyTransport.h>
+#import <MQTTClient_Codoon/MQTTSession.h>
+#import <MQTTClient_Codoon/MQTTSessionLegacy.h>
+#import <MQTTClient_Codoon/MQTTSessionSynchron.h>
+#import <MQTTClient_Codoon/MQTTMessage.h>
+#import <MQTTClient_Codoon/MQTTTransport.h>
+#import <MQTTClient_Codoon/MQTTCFSocketTransport.h>
+#import <MQTTClient_Codoon/MQTTCoreDataPersistence.h>
+#import <MQTTClient_Codoon/MQTTSSLSecurityPolicyTransport.h>
