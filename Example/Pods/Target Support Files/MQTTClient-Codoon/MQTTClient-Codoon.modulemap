@@ -1,6 +1,0 @@
-framework module MQTTClient_Codoon {
-  umbrella header "MQTTClient-Codoon-umbrella.h"
-
-  export *
-  module * { export * }
-}

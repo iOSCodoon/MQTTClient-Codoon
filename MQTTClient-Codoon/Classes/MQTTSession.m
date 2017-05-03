@@ -385,13 +385,13 @@
 
 - (void)keepAlive:(NSTimer *)timer
 {
-    DDLogVerbose(@"[MQTTSession] keepAlive %@ @%.0f", self.clientId, [[NSDate date] timeIntervalSince1970]);
+    //DDLogVerbose(@"[MQTTSession] keepAlive %@ @%.0f", self.clientId, [[NSDate date] timeIntervalSince1970]);
     (void)[self encode:[MQTTMessage pingreqMessage]];
 }
 
 - (void)checkDup:(NSTimer *)timer
 {
-    DDLogVerbose(@"[MQTTSession] checkDup %@ @%.0f", self.clientId, [[NSDate date] timeIntervalSince1970]);
+    //DDLogVerbose(@"[MQTTSession] checkDup %@ @%.0f", self.clientId, [[NSDate date] timeIntervalSince1970]);
     [self checkTxFlows];
 }
 

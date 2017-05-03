@@ -1,6 +1,0 @@
-framework module Pods_MQTTClient_Codoon_Tests {
-  umbrella header "Pods-MQTTClient-Codoon_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
