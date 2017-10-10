@@ -24,7 +24,7 @@
         static const DDLogLevel ddLogLevel = myLogLevel;
     #endif
 #else
-    #ifdef DEBUG
+    #ifdef DDLOG
         #define DDLogVerbose NSLog
         #define DDLogWarn NSLog
         #define DDLogInfo NSLog
@@ -34,7 +34,7 @@
         #define DDLogWarn(...)
         #define DDLogInfo(...)
         #define DDLogError(...)
-        #endif
+    #endif
 #endif
 
 

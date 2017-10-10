@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MQTTClient-Codoon'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Forked from MQTT-Client-Framework,based on 0.7.7'
   s.homepage         = 'https://github.com/iOSCodoon/MQTTClient-Codoon'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
