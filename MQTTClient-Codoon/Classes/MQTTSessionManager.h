@@ -87,7 +87,7 @@ typedef NS_ENUM(int, MQTTSessionManagerState) {
         context:(void *)context {
         if ([keyPath isEqualToString:@"effectiveSubscriptions"]) {
             MQTTSessionManager *manager = (MQTTSessionManager *)object;
-            DDLogVerbose(@"effectiveSubscriptions changed: %@", manager.effectiveSubscriptions);
+            // DDLogVerbose(@"effectiveSubscriptions changed: %@", manager.effectiveSubscriptions);
         }
     }
  *  @endcode

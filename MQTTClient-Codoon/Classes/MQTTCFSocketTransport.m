@@ -31,7 +31,7 @@
 }
 
 - (void)open {
-    DDLogVerbose(@"[MQTTCFSocketTransport] open");
+    // DDLogVerbose(@"[MQTTCFSocketTransport] open");
     self.state = MQTTTransportOpening;
 
     NSError* connectError;
@@ -90,7 +90,7 @@
 }
 
 - (void)close {
-    DDLogVerbose(@"[MQTTCFSocketTransport] close");
+    // DDLogVerbose(@"[MQTTCFSocketTransport] close");
     self.state = MQTTTransportClosing;
 
     if (self.encoder) {
@@ -141,18 +141,18 @@
 
 + (NSArray *)clientCertsFromP12:(NSString *)path passphrase:(NSString *)passphrase {
     if (!path) {
-        DDLogWarn(@"[MQTTCFSocketTransport] no p12 path given");
+        // DDLogWarn(@"[MQTTCFSocketTransport] no p12 path given");
         return nil;
     }
     
     NSData *pkcs12data = [[NSData alloc] initWithContentsOfFile:path];
     if (!pkcs12data) {
-        DDLogWarn(@"[MQTTCFSocketTransport] reading p12 failed");
+        // DDLogWarn(@"[MQTTCFSocketTransport] reading p12 failed");
         return nil;
     }
     
     if (!passphrase) {
-        DDLogWarn(@"[MQTTCFSocketTransport] no passphrase given");
+        // DDLogWarn(@"[MQTTCFSocketTransport] no passphrase given");
         return nil;
     }
     CFArrayRef keyref = NULL;
@@ -162,27 +162,27 @@
                                                                        forKey:(__bridge id)kSecImportExportPassphrase],
                                             &keyref);
     if (importStatus != noErr) {
-        DDLogWarn(@"[MQTTCFSocketTransport] Error while importing pkcs12 [%d]", (int)importStatus);
+        // DDLogWarn(@"[MQTTCFSocketTransport] Error while importing pkcs12 [%d]", (int)importStatus);
         return nil;
     }
     
     CFDictionaryRef identityDict = CFArrayGetValueAtIndex(keyref, 0);
     if (!identityDict) {
-        DDLogWarn(@"[MQTTCFSocketTransport] could not CFArrayGetValueAtIndex");
+        // DDLogWarn(@"[MQTTCFSocketTransport] could not CFArrayGetValueAtIndex");
         return nil;
     }
     
     SecIdentityRef identityRef = (SecIdentityRef)CFDictionaryGetValue(identityDict,
                                                                       kSecImportItemIdentity);
     if (!identityRef) {
-        DDLogWarn(@"[MQTTCFSocketTransport] could not CFDictionaryGetValue");
+        // DDLogWarn(@"[MQTTCFSocketTransport] could not CFDictionaryGetValue");
         return nil;
     };
     
     SecCertificateRef cert = NULL;
     OSStatus status = SecIdentityCopyCertificate(identityRef, &cert);
     if (status != noErr) {
-        DDLogWarn(@"[MQTTCFSocketTransport] SecIdentityCopyCertificate failed [%d]", (int)status);
+        // DDLogWarn(@"[MQTTCFSocketTransport] SecIdentityCopyCertificate failed [%d]", (int)status);
         return nil;
     }
     

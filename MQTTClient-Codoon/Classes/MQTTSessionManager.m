@@ -222,7 +222,7 @@
      withClientId:(NSString *)clientId
    securityPolicy:(MQTTSSLSecurityPolicy *)securityPolicy
      certificates:(NSArray *)certificates {
-    DDLogVerbose(@"MQTTSessionManager connectTo:%@", host);
+    // DDLogVerbose(@"MQTTSessionManager connectTo:%@", host);
     BOOL shouldReconnect = self.session != nil;
     if (!self.session ||
         ![host isEqualToString:self.host] ||
@@ -287,11 +287,11 @@
         self.reconnectFlag = FALSE;
     }
     if(shouldReconnect){
-        DDLogVerbose(@"[MQTTSessionManager] reconnecting");
+        // DDLogVerbose(@"[MQTTSessionManager] reconnecting");
         [self disconnect];
         [self reconnect];
     }else{
-        DDLogVerbose(@"[MQTTSessionManager] connecting");
+        // DDLogVerbose(@"[MQTTSessionManager] connecting");
         [self connectToInternal];
     }
 }
@@ -332,7 +332,7 @@
                                    @(MQTTSessionEventProtocolError): @"protocoll error",
                                    @(MQTTSessionEventConnectionClosedByBroker): @"connection closed by broker"
                                    };
-    DDLogVerbose(@"[MQTTSessionManager] eventCode: %@ (%ld) %@", events[@(eventCode)], (long)eventCode, error);
+    // DDLogVerbose(@"[MQTTSessionManager] eventCode: %@ (%ld) %@", events[@(eventCode)], (long)eventCode, error);
 #endif
     [self.reconnectTimer invalidate];
     switch (eventCode) {
@@ -487,7 +487,7 @@
         }
     }
     self.internalSubscriptions = newSubscriptions;
-    DDLogVerbose(@"MQTTSessionManager internalSubscriptions: %@", self.internalSubscriptions);
+    // DDLogVerbose(@"MQTTSessionManager internalSubscriptions: %@", self.internalSubscriptions);
 }
 
 @end

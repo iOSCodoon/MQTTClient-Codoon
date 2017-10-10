@@ -12,35 +12,35 @@
 
 
 // #ifdef LUMBERJACK
-//     #define LOG_LEVEL_DEF ddLogLevel
+//     #define LOG_LEVEL_DEF // DDLogLevel
 //     #import <CocoaLumberjack/CocoaLumberjack.h>
 //     #ifndef myLogLevel
 //         #ifdef DEBUG
-//             static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+//             static const // DDLogLevel // DDLogLevel = // DDLogLevelWarning;
 //         #else
-//             static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+//             static const // DDLogLevel // DDLogLevel = // DDLogLevelWarning;
 //         #endif
 //     #else
-//         static const DDLogLevel ddLogLevel = myLogLevel;
+//         static const // DDLogLevel // DDLogLevel = myLogLevel;
 //     #endif
 // #else
 //     #ifdef DEBUG
-//         #define DDLogVerbose NSLog
-//         #define DDLogWarn NSLog
-//         #define DDLogInfo NSLog
-//         #define DDLogError NSLog
+//         #define // DDLogVerbose NSLog
+//         #define // DDLogWarn NSLog
+//         #define // DDLogInfo NSLog
+//         #define // DDLogError NSLog
 //     #else
-//         #define DDLogVerbose(...)
-//         #define DDLogWarn(...)
-//         #define DDLogInfo(...)
-//         #define DDLogError(...)
+//         #define // DDLogVerbose(...)
+//         #define // DDLogWarn(...)
+//         #define // DDLogInfo(...)
+//         #define // DDLogError(...)
 //         #endif
 // #endif
 
-#define DDLogVerbose(...)
-#define DDLogWarn(...)
-#define DDLogInfo(...)
-#define DDLogError(...)
+#define // DDLogVerbose(...)
+#define // DDLogWarn(...)
+#define // DDLogInfo(...)
+#define // DDLogError(...)
 
 
 #endif /* MQTTLog_h */

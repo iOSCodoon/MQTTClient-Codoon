@@ -707,9 +707,9 @@ typedef void (^MQTTPublishHandler)(NSError *error);
  qos:1
  publishHandler:^(NSError *error){
  if (error) {
- DDLogVerbose(@"error: %@ %@", error.localizedDescription, payload);
+ // DDLogVerbose(@"error: %@ %@", error.localizedDescription, payload);
  } else {
- DDLogVerbose(@"delivered:%@", payload);
+ // DDLogVerbose(@"delivered:%@", payload);
  delivered++;
  }
  }];
