@@ -468,9 +468,9 @@
                         @"MQTTDecoderEventConnectionError"
                         ];
     // DDLogVerbose(@"[MQTTSession] decoder handleEvent: %@ (%d) %@",
-                 events[eventCode % [events count]],
-                 eventCode,
-                 [error description]);
+    //              events[eventCode % [events count]],
+    //              eventCode,
+    //              [error description]);
     
     switch (eventCode) {
         case MQTTDecoderEventConnectionClosed:
