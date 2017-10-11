@@ -126,7 +126,7 @@
             }
             if (self.dataBuffer.length == self.length + self.offset) {
                 // DDLogVerbose(@"[MQTTDecoder] received (%lu)=%@...", (unsigned long)self.dataBuffer.length,
-                                    [self.dataBuffer subdataWithRange:NSMakeRange(0, MIN(256, self.dataBuffer.length))]);
+                //                     [self.dataBuffer subdataWithRange:NSMakeRange(0, MIN(256, self.dataBuffer.length))]);
                 [self.delegate decoder:self didReceiveMessage:self.dataBuffer];
                 self.dataBuffer = nil;
                 self.state = MQTTDecoderStateDecodingHeader;
